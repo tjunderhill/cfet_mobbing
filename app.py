@@ -19,8 +19,8 @@ def fooBarQix(number):
         elif strNumber[c] == '0':
             result += "*"
         else:
-            result += strNumber
-            
+            result += strNumber[c]
+
     if len(result) == 0:
         result+=str(number)
 
@@ -34,7 +34,7 @@ assert fooBarQix(2) == "2"
 assert fooBarQix(3) == "FooFoo", fooBarQix(3)
 assert fooBarQix(4) == "4"
 assert fooBarQix(5) == "BarBar"
-assert fooBarQix(6) == "Foo"
+assert fooBarQix(6) == "Foo", fooBarQix()
 assert fooBarQix(7) == "QixQix"
 assert fooBarQix(8) == "8"
 assert fooBarQix(9) == "Foo"
