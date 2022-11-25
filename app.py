@@ -12,12 +12,14 @@ def fooBarQix(number):
     for c in range(0, len(strNumber)):
         if strNumber[c] == '3':
             result += "Foo"
-        if strNumber[c] == '5':
+        elif strNumber[c] == '5':
             result += "Bar"
-        if strNumber[c] == '7':
+        elif strNumber[c] == '7':
             result += "Qix"
-       # if strNumber[c] == '0':
-          #  result += "*"
+        elif strNumber[c] == '0':
+            result += "*"
+        else:
+            result += strNumber
             
     if len(result) == 0:
         result+=str(number)
@@ -29,7 +31,7 @@ print(fooBarQix(101))
 
 assert fooBarQix(1) == "1", fooBarQix(1)
 assert fooBarQix(2) == "2"
-assert fooBarQix(3) == "FooFoo"
+assert fooBarQix(3) == "FooFoo", fooBarQix(3)
 assert fooBarQix(4) == "4"
 assert fooBarQix(5) == "BarBar"
 assert fooBarQix(6) == "Foo"
