@@ -7,6 +7,16 @@ def fooBarQix(number):
         result += "Bar"
     if number % 7 == 0:
         result += "Qix"
+
+    strNumber = str(number)
+    for c in range(0, len(strNumber)):
+        print(strNumber[c])
+        if strNumber[c] == '3':
+            result += "Foo"
+        if strNumber[c] == '5':
+            result += "Bar"
+        if strNumber[c] == '7':
+            result += "Qix"
     return result
 
-print(fooBarQix(30))
+print(fooBarQix(5))
