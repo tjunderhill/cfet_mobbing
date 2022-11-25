@@ -24,6 +24,23 @@ def fooBarQix(number):
 
 print(fooBarQix(101))
 
+
+
+
+assert fooBarQix(1) == "1", fooBarQix(1)
+assert fooBarQix(2) == "2"
+assert fooBarQix(3) == "FooFoo"
+assert fooBarQix(4) == "4"
+assert fooBarQix(5) == "BarBar"
+assert fooBarQix(6) == "Foo"
+assert fooBarQix(7) == "QixQix"
+assert fooBarQix(8) == "8"
+assert fooBarQix(9) == "Foo"
+assert fooBarQix(10) == "Bar"
+assert fooBarQix(13) == "Foo"
 assert fooBarQix(15) == "FooBarBar"
+assert fooBarQix(21) == "FooQix"
+assert fooBarQix(33) == "FooFooFoo"
 assert fooBarQix(51) == "FooBar"
 assert fooBarQix(52) == "Bar"
+assert fooBarQix(53) == "BarFoo"
