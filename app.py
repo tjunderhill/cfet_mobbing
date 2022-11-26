@@ -5,19 +5,21 @@ def fooBarQix(number):
         5: "Bar",
         7: "Qix"
     }
-
-    return_number = True
     digits = [int(d) for d in str(number)]
+
+    # find out if anything needs replaced or appended
+    replacements_needed = False
     for key in non_zero_replacements.keys():
         if (number % key == 0) or (key in digits):
-            return_number = False
+            replacements_needed = True
             break
 
-    if return_number:
+    if not replacements_needed:
+        # return number with zeros substituded in place
         return str(number).replace('0', '*')
 
+    # do the replacing and appending
     result = ""
-
     for key in non_zero_replacements.keys():
         if number % key == 0:
             result += non_zero_replacements[key]
